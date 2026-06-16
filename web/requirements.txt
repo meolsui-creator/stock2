@@ -1,0 +1,8 @@
+Flask>=3.0
+FinanceDataReader>=0.9.50
+matplotlib>=3.7
+python-pptx>=0.6.21
+Pillow>=9.0
+python-dotenv>=1.0
+# 재무(선택): DART_KEY가 있을 때만 사용
+OpenDartReader>=0.2.4

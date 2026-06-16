@@ -109,6 +109,28 @@ python .claude/skills/outlook-deck/build_deck.py --cover A
 
 ---
 
+## 4-B. 🌐 Use it as a website (just type a stock name!)
+
+If you'd rather **type a stock name in your browser** and get a PPTX with no coding,
+use the included simple web app.
+
+```bash
+# 1) Install the web app's libraries (once)
+python -m pip install -r web/requirements.txt
+
+# 2) Start the server
+python web/app.py
+```
+
+Then open **<http://127.0.0.1:5000>** in your browser → type `삼성전자` → click
+**Generate**. You'll see a price-chart preview and a **Download PPTX** button.
+
+- Price/chart is collected automatically **without any key** (FinanceDataReader).
+- Financials are filled in only if `DART_KEY` exists in `.env`; otherwise shown as "확인 불가" (not available).
+- For deeper news/sentiment/risk analysis, use the Claude Code analysts separately.
+
+---
+
 ## 5. Where do the results go?
 
 Everything is saved in the **`reports/` folder**.
